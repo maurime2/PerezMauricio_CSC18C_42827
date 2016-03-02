@@ -1,0 +1,11 @@
+
+		Resize(int newSize)
+			1. Create new bag of size newSize.
+			2. in a for loop copy all items in original bag to the new bag.
+			3. reference the new bag to the old bag's member variable.
+			
+		<T> - Place holder for the datatype we want to use.
+		
+		
+		Linked List - You have a node. NOde had data. Two COmponents, Data, and
+					  pointer to next data on the list.

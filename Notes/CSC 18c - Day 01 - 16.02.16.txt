@@ -1,0 +1,21 @@
+00:00:00	O(n^2)		-   100 Elements -     1 Sec
+						-  1000 Elements -   100 Sec
+						- 10000 Elements - 10000 Sec
+		
+			O(nlog(n))	-   100 Elements -           1 Sec
+						-  1000 Elements -  10*3    31 Sec
+						- 10000 Elements - 100*6.6 660 Sec
+			
+			DEQUE - DECK DATATYPES
+			Double Ended Queue
+			
+00:37:00	Revrse Polish Notation	- When Talking about Stacks
+			Can help you put together expresion evaluators		<-- See This!!!
+			
+00:40:00	Hameltinion Cycle Problem - Non Determanistic Polynomial Problem
+				* Shortest Cycle Around a Graph
+				* All Problems can be done in Polynomial Time Complexity
+				 
+				 
+00:58:00	Documenting Tool
+				*
