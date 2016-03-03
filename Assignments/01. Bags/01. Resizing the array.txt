@@ -1,0 +1,12 @@
+Take the Bags project that was introduced in class and implement the following:
+
+1: Resizing the array when the number of items exceeds the size of the array
+	(no linked lists allowed - yet)
+
+This should be a fairly quick and easy assignment, that is due no later than 
+11:59PM on Thursday, March 3rd, 2016 via the Assignment Submission on 
+Blackboard. Do document how you implemented the resizing of the array, how you
+tested the method.
+
+Include the properly filled out PSP 0.1 Excel Spreadsheet
+remember, any assignments with less than one hour of work will not be accepted)
