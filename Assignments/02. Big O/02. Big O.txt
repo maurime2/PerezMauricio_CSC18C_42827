@@ -1,0 +1,10 @@
+- Analyze the three following recursive functions and estimate the Big O of these
+	recursive functions found in the provided Java program.
+
+- Also analyze the count_down function we had in class, 
+	*see if you can figure out why it runs in the order of Big O( 1 + lg n ).
+
+Submit through the Assignment Submission tool, a detailed one page report on 
+these four items in this assignment. 
+ 
+ This assignment is due by 6:00PM on Tuesday, 3/8/16.
