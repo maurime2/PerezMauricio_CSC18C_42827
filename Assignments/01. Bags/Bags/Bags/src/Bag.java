@@ -61,5 +61,11 @@ public final class Bag<T> implements BagInterface<T> {
         T[] arr = (T[])new Object[this.numberOfEntries];
         for(int i=0;i<this.numberOfEntries;i++) arr[i]=this.bag_items[i];
         return arr;
-    }            
+    }
+        //My COde - Resizes Array
+        public T[] toArrayResize() {
+        T[] arr = (T[])new Object[this.numberOfEntries];
+        for(int i=0;i<this.numberOfEntries;i++) arr[i]=this.bag_items[i];
+        return arr;
+    }  
 }
