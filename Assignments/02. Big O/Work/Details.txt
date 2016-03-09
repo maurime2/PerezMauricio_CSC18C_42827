@@ -1,0 +1,22 @@
+Big O Calculation:
+
+At first it was a bit confusing to interprete the data seeing as how the 
+default only displayed 10 instances of each function running. The First
+thing I did is plot out 100 instances of each Function.
+
+The first function only gave me 31 instances, seing as how it blew up in 
+count at an exponential rate. I then ploted theise values and verified 
+that indeede it grew exponentialy. Upon seeing the counts, i was able to
+actualy calculate the exact Big O formula. 2^n - 1. I say exact because of
+all the formulas, this is the only one that gives me the exact count given
+n.
+
+The Second Formula was a bit trickyer. It grows just like the first one, 
+but at half the rate or less. It is of exponential order 2^n but it dose not 
+grow as fast. I say its more of the order (2*2^(ln n/ln 2)) - 1.
+
+The Third is hard to see, but its of the order of ln n / ln 2 
+(or log (base 2) n). Everytime n makes the whole number increase, it literaly
+doubles the count.
+
+Confusing if you dont graph.

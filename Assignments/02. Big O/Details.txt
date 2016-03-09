@@ -1,8 +1,0 @@
-Big O Calculation:
-
-At first it was a bit confusing to interprete the data seeing as how the 
-default only displayed 10 instances of each function running. The First
-thing I did is plot out 100 instances of each Function.
-
-The first function only gave me 31 instances, seing as how it blew up in 
-count at an exponential rate.
