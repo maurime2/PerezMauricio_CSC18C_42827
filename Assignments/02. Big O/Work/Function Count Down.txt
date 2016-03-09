@@ -1,0 +1,35 @@
+
+1
+n=1, count=1
+2
+1
+n=2, count=2
+3
+1
+n=3, count=2
+4
+2
+1
+n=4, count=3
+5
+2
+1
+n=5, count=3
+6
+3
+1
+n=6, count=3
+7
+3
+1
+n=7, count=3
+8
+4
+2
+1
+n=8, count=4
+9
+4
+2
+1
+n=9, count=4
