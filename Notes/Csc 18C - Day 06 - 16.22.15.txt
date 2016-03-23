@@ -1,0 +1,98 @@
+		Data	-	Link      			 Data     - Link			Data			- Link
+_________________________		_________________________		_________________________
+|		 		   * PTR*		|     		 	   *    *		|     		 		* n *
+|   Data	 	   *NEXT*	-->	|   DATA		   *    *	-->	|     		 		* u *
+|     		 	   *node*		|     		 	   *    *		|     		 		* l *
+|__________________*____*		|__________________*____*		|___________________*_l_*
+		head							O(n)
+		tail							a[5]							O(1)
+
+
+00:10:05			FIFO	-	FIRST IN, FITST OUT
+
+
+
+
+
+Doubley Linked List
+		e1								e2								e3
+_________________________<------_________________________<------_________________________
+*n	*	 		   * PTR*		*	*  		 	   *    *		*	*  		 		* n *
+*u	*   Data 	   *NEXT*		*	*   DATA	   *    *		*	* 	DATA 		* u *
+*l	* 		 	   *node*------>*	* 		 	   *    *------>*	* 		 		* l *
+*l__*______________*____*		*___*______________*____*		*___*_______________*_l_*
+		head							O(n)
+
+
+array:		 instant data access
+linked list: adding an element is easy and quick and painless. Data alocation is not hard.
+
+
+
+*************************
+
+
+IntelliJ  IDE
+
+Unit Testing [4 minutes]
+
+////Private Inner Class
+public class LinkedList {
+	private Node head;
+	...(other members)
+	...(other methods/functions)
+	private class Node{
+		...private members and 
+		...functions
+	}
+}
+
+Inner classes are for utility, typically.
+
+
+
+Node
+-----------------
+|	    |       |		1. add 5
+|  data | node  |		2. add 15
+|		|       |       3. add 7
+-----------------	    4. insert 18 @ index 1 
+
+-----------------		-------------------     -------------------
+|	    |		|       |         |		  |     |         |       |
+|  5    |  ==========>  |   15    |  =========> |  7      | null  |
+|	    |		|       |		  |       |     |	      |	      |
+-----------------        -------------------     -------------------
+
+To insert between two nodes, you musthave the node before it (head w/ 5) to
+point to the node being inserted AND have the inserted node point to the
+node that (head w/5) was pointing to before the insert.
+
+To delete a node, you reverse the process. You take the node before it to
+point to the node after it and have the node being deleted point to NULL.
+
+			Singly linked List
+			
+			Data - Link
+			_____________
+			*		*	*	Singly Linked List
+			*		*	*
+			*		*	*
+			*_______*___*
+			
+			Link -     Data     - Link
+			_________________________
+			*   *		 		*   *	Doubly Linked List
+			*   *		 		*   *
+			*   *		 		*   *
+			*___*_______________*___*
+			
+			
+			
+00:16:00	- 	In lInkedList.Java - He explaing how public void add works				
+
+00:31:00	- 	Private Inner Class: line 114 - private class Node
+
+00:37:40	- 	Junit Test - Do NOT DOCTOR THE TEST!!!!
+00:42:20	-	How it determines how it passes the test...
+
