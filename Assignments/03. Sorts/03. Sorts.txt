@@ -1,0 +1,12 @@
+Assingment #3: DUE 2016.03.25
+Implement in yout bag class the selection Sort Method, and the Merge Sort 
+Method both Methods need to pass a Boolean Parameter that determines sort order
+(true for ascending, false for descending). Provide driver main function 
+demonstrating correctness of both methods with Strings, Integer, and 
+Float Wrapper Classes.
+
+Extra Credit: Third Sorting Algorithm of your Choice
+
+
+b.bubblesort(boolean.sortOrder)		true = sort ascending small to big
+b.mergeSort(boolean.sortOrder)		False = sort decending big to smallest
