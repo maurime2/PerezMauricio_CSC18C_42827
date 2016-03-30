@@ -11,7 +11,7 @@ actualy calculate the exact Big O formula. 2^n - 1. I say exact because of
 all the formulas, this is the only one that gives me the exact count given
 n.
 
-The Second Formula was a bit trickyer. It grows just like the first one, 
+The Second Formula was a bit trickier. It grows just like the first one, 
 but at half the rate or less. It is of exponential order 2^n but it dose not 
 grow as fast. I say its more of the order (2*2^(ln n/ln 2)) - 1.
 
