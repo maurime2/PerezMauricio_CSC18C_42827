@@ -25,7 +25,12 @@ public class Queue<T> implements QueueInterface<T>
 	}
 	
 	// ----- functions/methods in the interface that must be implemented -----
-	
+	//returns true if the queue is empty (no items in queue)
+	//False if queue is (has at least one or more items in queue)
+	public boolean is Empty()
+	{
+		return numberofItems == 0;
+	}	
 	
 	// -----------------------------------------------------------------------
 	
