@@ -1,0 +1,51 @@
+				This week: Queue
+				Next Week: Dequeue
+				
+00:08:08	- 	Queue: FIFO
+				First In: First Out
+				
+00:09:50	-	Shopping Queue Example
+								 /Front[0]		/Tail[5]
+00:11:10	-	With an array:	0  1  2  3  4  5  6  7
+								8  13 18 61 41 32 
+								
+				Pop-Front/Dequeue	   /Front[0]	/Tail[5]
+00:12:00	-						0  1  2  3  4  5  6  7
+									   13 18 61 41 32 
+								
+								
+				Push-Back/Enqueue	/Front[0]	   /Tail[5]
+00:13:00	-						0  1  2  3  4  5  6  7
+									     18 61 41 32
+										 
+				Clean Up- Big o of n
+												/Front[4]/Tail[7]
+00:13:00	-						0  1  2  3  4  5  6  7
+											   32 47 58	79
+											   
+								Clean Up- Big o of n
+									/Front[0]/Tail[3]
+00:13:00	-						0  1  2  3  4  5  6  7
+								   32 47 58	79
+								   
+								/Front[0]/Tail[3]
+								
+							    8 16 18	34 61
+00:17:00	- Doubley Linked List
+					 <--		<--		 <--		<--
+				[]8[]    []16[]    []18[]    []34[]    []61[]
+					 -->		-->		 -->		-->
+					 
+00:22:00	- head=head.getNext();
+					 	  <--		 <--	  <--
+				    []16[]    []18[]    []34[]    []61[]
+					 	  -->		 -->	  -->
+				tail.tail.getNext();	//Maybe
+						  <--		 <--	  <--		<--
+				    []16[]    []18[]    []34[]    []61[]	[]88[]
+					 	  -->		 -->	  -->		-->
+			
+				In Queue.java:
+00:25:00	-	Lines 16-31 (coding the same thing twice)
+00:26:00	-	Going over the Queue.java file
+				
