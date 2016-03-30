@@ -114,5 +114,9 @@ public class QueueTest
 		System.out.print("Content of queue_of_doubles: ");
 		queue_of_doubles.display();		
 		System.out.printf("\n\n");
+		
+		Queue<Strings> queue_of_strings = new Queue();
+		queue_of_strings.push_back("Tonight's");
+		
 	}
 }

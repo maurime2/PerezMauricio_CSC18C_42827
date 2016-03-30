@@ -49,5 +49,9 @@
 00:25:00	-	Lines 16-31 (coding the same thing twice)
 00:26:00	-	Going over the Queue.java file
 
-Test
-				
+					Fill in code. See Notes between coments
+			
+01:04:30	- Edit QueueTest.java
+01:12:00	  run the program
+
+01:23:44	-	Next Assignment will be due on 04.08.2016

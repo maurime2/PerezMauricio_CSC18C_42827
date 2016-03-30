@@ -32,6 +32,75 @@ public class Queue<T> implements QueueInterface<T>
 		return numberofItems == 0;
 	}	
 	
+	//Return the number of items currently in the que
+	public int size()
+	{
+		return numberOfItems;
+	}
+	
+	//Return the calue of the item currently at front of wue
+	public T font()
+	{
+		return head.getValue();
+	}
+	
+	//Returns the value of the item currently at the end of the ueue
+	public T back()
+	{
+		return tail.getValue();
+	}
+	
+	//Places parameter newItem into the end of the queue
+	// // (This is synonymous to the enqueue method)
+	public void push_back(T newItem)
+	{
+		if (head==null)
+		{
+			head = new Node(newItem);
+			tail = head;
+			numberOgIrems++;
+		}
+		else
+		{
+			Node<T> newNode = new Node(newItem);
+			tail.setNext(newNode);
+			newNode.setPrevious(tail);
+			tail = newNode;
+			numberOfItems++;
+		}
+		
+	}
+	//places parameter newItem onto the end of the queue
+	//(This is synonymous to the push_back Method)
+	public void enqueue(T newItem)
+	{
+		this.push_back(newItem);
+	}
+	
+	//returns and removes the current item at the front of the queue.
+	//the item that is in the queue behind the item becomes the new front item
+	public T pop_front()
+	{
+			T headDataValue = head.getValue();
+			if(numberOfItems > 0)
+			{
+			// Node<T> oldHead = head;
+			head.getValue();
+			head=head.getNext();
+			head.setPrevious(null);
+			numberofItems--;
+			}
+			return headDataValue;
+			//return data value
+	}
+	
+	//retuens and removes the current item at the front of the queue
+	//(this is synonymous to the pop_front method)
+	public T dequeue()
+	{
+		return this.pop_front();
+	}
+	
 	// -----------------------------------------------------------------------
 	
 	// Node Inner Class
