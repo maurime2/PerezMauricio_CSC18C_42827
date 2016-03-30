@@ -1,0 +1,19 @@
+http://visualgo.net/sorting.html#
+
+Implement in your Bag class, the Selection Sort and Merge Sort 
+(10 points extra credit - implement a third sorting algorithm of your choice).
+
+In all of the sorting algorithms you implement:
+	- make sure to have them pass a boolean parameter that dictates the sorting order 
+		(	true - sort in ascending order from smallest to largest, 
+			false - sort in descending order from largest to smallest ).
+
+	- Provide a main program, that is a test driver, demonstrating the sorting 
+		algorithms working for Bags of String, Integers, and Float 
+		( primitive types such as int and float, you need to use the their 
+			respective wrapper classes Integer and Float ).
+
+	- Be sure to document your code very well, and also provide your properly
+		filled out PSP Excel Spreadsheet.
+
+This assignment is due no later than 11:59PM on 4/8/16 for 50 points.
