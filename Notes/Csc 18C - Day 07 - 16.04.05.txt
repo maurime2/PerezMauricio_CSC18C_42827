@@ -1,0 +1,49 @@
+00:02:59	-	Final Exam: Written(6 Question) + Project
+00:05:00	-	Double Ended Queues Deques
+
+00:06:30	-	Pigion Hole Principle: In mathematics, the pigeonhole
+				principle states that if n items are put into m containers,
+				with n > m, then at least one container must contain more than
+				one item. This theorem is exemplified in real-life by truisms 
+				like "there must be at least two left gloves or two right 
+				gloves in a group of three gloves".
+				
+00:07:44	-	Double Ended Queues Deques
+					Find all the prime numbers between 2 - 20
+	QoI-Queue of Integers
+					2	3	4	5	6	7	8	9	10
+					11	12	13	14	15	19	17	18	19	20
+00:09:30				
+	QoP = 2
+	
+00:12:00 	-	Trick: Celing of the Sqrt of 20 is 5 - Dont need to check anything above 5
+	
+				Deque - "Deck"
+				
+				implement:  push_front : adds a node to the beginning of the queue
+							pop_back:	Move node from end of queue.
+							
+				iterators:	begin 		- set iterator to start of deque-head.
+							end-set 	- iterator to rnd of deque-tail.
+							next_move	- iterator to next node if possible.
+							previous	- Move iterator to previous mode, if possible.
+							current 	- returns the data item at current iterator position.
+							
+00:29:00	-	1. Create newNode
+				2. Link head previous to newNode
+				3. Link newNodes.nead to head
+				4. head = new.Node
+				
+00:38:00		Pop Back
+				1. Set tailDataValue = null
+				2. if bumber items > 0
+					a. tailDataValue = tailgetValue()
+					b. Nodes<T> oldTail = tail
+					c. tail = oldTail.getPrevious()
+					d. oldTail.setPrevious(null)
+					e. decrement number of items
+				3. return tailDataValue
+				
+				
+00:56:00			PREVIOUS WILL BE LEFT UP TO US!!!
+
