@@ -1,0 +1,63 @@
+00:04:30	-	Final
+
+
+
+				Queue - FIFO - First In, First Out
+				Stacks - LIFO -	Last In, First Our
+				
+				Deck: 	push_front
+						pop_frint(dequeue)
+						push_back(enqueue)
+						pop_back
+						
+00:07:50		"remember to take atomita book"
+					Push Down Atomita - Needs a Stack
+00:13:00					
+					etc...
+					MOV	AX,3
+					MOV	BX,5
+					MOV 
+					ADD
+					MUL
+00:14:06
+
+00:15:00	POP AND PUSH:
+			push - pushes element/item to top of stack.
+			pop - pops/removes item from top of stack, returns value of that item.
+			
+			"top" item is last item we put on stack.
+			
+00:20:19	Activation Record / Stack Frame
+				- Parameters
+				- Return Address
+					-Address of the program counter AFTER the function call
+					
+					08001000 	PUSH 3		4 bytes for machine code
+					0800100C	PUSH 5			8 bytes for 64 bit int
+					08001018	PUSH 6
+					08001024	CALL ADD		****************
+					08001030					*   08001030   *
+												****************
+												*		6	   *
+												****************
+												*		5      *
+												****************
+												*		3      *
+												****************
+												
+Public class Stack {
+	private int [] items;
+	private int count;
+	public Stack(){ items = new int[20];count=0;}
+	public static void push(int data)
+	{
+		items[count]=data;
+		count++;
+	}//end main
+	public static int pop(){
+		return items[count--];
+	}//end int pop
+	
+}//end stack
+												
+00:28:46	QEMU

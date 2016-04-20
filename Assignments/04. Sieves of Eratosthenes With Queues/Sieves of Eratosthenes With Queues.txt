@@ -1,0 +1,81 @@
+Sieves of Eratosthenes With Queues
+Update: 4/7/16, I have considered extending the due date for this assignment from 4/8/16 to 4/15/16.
+
+
+Use only the Queue class that we put together in class for this assignment. Do not use the built in Queue class that comes with the Java framework.
+
+
+Implement a program that computes all the primes up to some integer n, have this n
+be an integer you prompt the user to enter. 
+
+Eratosthenes used a technique that is known as the Sieve of Eratosthenes.
+
+The algorithm pseudocode is the following:
+
+1. Create a queue named queueOfIntegers, enqueue it with the consecutive integers 2 through n.
+2. Create an empty queue to store primes, perhaps named queueOfPrimes.
+3. Do
+4.        Get the next prime number, p, by removing the first value in queueOfNumbers.
+5.        Enqueue the value of p into queue of primes.
+6.       Create a new queue and fill this queue by doing the following:
+7.            While queueOfNumbers is not empty, dequeue the front number, if it is not divisible by p
+               then enqueue this number to newQueue (queueOfPrimes.back() is our current prime number)
+8.        Assign the queueOfNumbers object with the newly created queue object
+9. While (queueOfPrimes.back() < sqrt(n))
+10. Display the primes, which are all the values in the queueOfPrimes object.
+
+
+Note: this pseudocode might have a glitch in it. It is only to serve as a starting point for you to get an idea of how to do this problem. It uses three queues, can you solve this with just two queues: queueOfIntegers and queueOfPrimes?
+
+With a successful run of this program you should have something like this ( in bold is the program output, and in dark green is the user input, important comments in red )
+
+
+Enter an integer N: 11
+
+Content of: queueOfIntegers: 2 3 4 5 6 7 8 9 10 11
+
+Dequeuing a prime number: 2
+
+Content of: queueOfPrimes: 2
+
+Content of: queueOfIntegers: 3 5 7 9 11 (this queue is all of the multiples of 2 removed)
+
+
+Dequeuing a prime number: 3
+
+Content of: queueOfPrimes: 2 3
+
+Content of: queueOfIntegers: 5 7 11 (this queue is all of the multiples of 2 and 3 removed)
+
+
+Dequeuing a prime number: 5
+
+Content of: queueOfPrimes: 2 3 5
+
+Content of: queueOfIntegers: 7 11 (this queue is all of the multiples of 2, 3, 5 removed)
+
+
+Dequeuing a prime number: 7
+
+Content of: queueOfPrimes: 2 3 5 7
+
+Content of: queueOfIntegers: 11 (this queue is all of the multiples of 2, 3, 5, 7 removed)
+
+
+Dequeuing a prime number: 11
+
+Content of: queueOfPrimes: 2 3 5 7 9 11
+
+Content of: queueOfIntegers: (this queue is all of the multiples of 2, 3, 5, 7, 9, 11 removed, ought to be empty at this point)
+
+Content of: queueOfPrimes: 2 3 5 7 11
+
+
+Be sure to document your code very well (provide at least 5 test runs with different values of n), and also provide your properly filled out PSP Excel Spreadsheet or push to your github account (if you have one) a minimum three pushes.
+
+This assignment is due no later than 11:59PM on 4/15/16 for 50 points.
+
+PS. Keep a look out on this assignment as I will soon provide some screen shots of what your program could look like.
+
+Screenshot #1 ( I added to my program the ability to have a command line option called --verbose that outputs the program outputs similar to above, without this command line option, my program just outputs the queue of primes only )...
+
