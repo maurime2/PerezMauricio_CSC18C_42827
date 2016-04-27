@@ -1,0 +1,15 @@
+00:00:00		JUnit Testing and Final Project
+				Final Project:	????????
+				
+			TEST DRIVEN DEVELOPMENT //OUTLINE BELLOW
+00:03:10	1: Unit Testing
+			2: Implement Stack Class with a Deque.
+			3: Test it against the unit test. (Hope For the Best/it works)
+			
+00:06:35	Stack Class operations
+				Push	- Push item on tack.
+				Pop		- pops item stack, returns the item.
+				isEmpty	- true/falls if stack empty or not.
+				toString- dumps content of stack as a string.	
+				
+				
