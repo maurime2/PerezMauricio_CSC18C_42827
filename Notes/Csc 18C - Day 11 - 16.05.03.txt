@@ -1,0 +1,69 @@
+00:00:00	Final Project - Final Description
+			6 T/F
+			8 Short Answer
+			6 Multiple Choice
+			
+00:15:30	Last Class we talked simple stack implementation...
+			Stack.java
+			
+00:17:30	TEST QUESTION: LIFO
+							(push_back)
+			deque.push_front	-->	stack.push
+							(pop_back)
+			deque.pop_front		-->	stack.pop	<-- returns the 
+							(back)					element @ top
+													stack without
+													poping it
+00:22:00	peak - (push_back) or (pop_back)
+			green/yellow id you want
+			grow stack to front of deque
+				red grow stack from back of deque
+
+00:25:07	Assignment 5 Extended
+									x%8 = {0,...,7}
+00:54:30	Hash
+			8 Elements:							int hash (String Word)
+			*****************					{
+			* 0 *			*						Return word.length%8;
+			*****************					}
+			* 1 * wolverine *
+			*****************					a[hash("cat")] = "cat";
+			* 2 *			*					a[hash("tiger")]="tiger";
+			*****************					a[hash("wolverine")]="wolverine";
+			* 3 *	cat		*					a[hash("alligator")]="alligator";	//COLLISION WITH WOLVERINE in 1
+			*****************
+			* 4 *			*
+			*****************
+			* 5 *			*
+			*****************
+			* 6 *			*
+			*****************
+			* 7 *			*
+			*****************
+
+1:03:00		ALLIGATOR collision with WOLVERINE
+			can an array be an array of linked list???
+			Yes it can...
+												
+			*****************					
+			* 0 *			*					
+			*****************					
+			* 1 * 			*	--> wolverine --> alligator
+			*****************					
+			* 2 *			*					
+			*****************					
+			* 3 *			*	--> cat --> dog
+			*****************
+			* 4 *			*
+			*****************
+			* 5 *			*	--> tiger
+			*****************
+			* 6 *			*
+			*****************
+			* 7 *			*
+			*****************
+			
+			
+	other way of doing it...
+	stick it in to the next slot.. in the case of wolverine, alligator would be in slot 2.
+	dog would be in slot 4 after cat.
