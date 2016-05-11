@@ -1,0 +1,11 @@
+Take the stack class that we implemented in class and do the following with it:
+
+0) Convert the stack class to a template stack class (the existing class only works with integers).
+
+1) Provide functionality that will increase the size of the stack if we try to push an item onto an already full stack (resize the array).
+
+2) Demonstrate the functionality of the template stack class with pushing/popping of integers, floats/doubles, strings, and even simple classes if you wish to be very creative!
+
+Due by 4/29/16 @ 11:59PM - provide a completed PSP Spreadsheet or push to your github account with a minimum of three commits/pushes.
+
+stack.java
