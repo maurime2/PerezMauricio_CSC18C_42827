@@ -1,0 +1,15 @@
+00:00:00	His Jeep
+
+00:01:39	Trees:
+			- A Heirachal data Structure
+			
+						Carol
+					....|	|....				<---ROOT
+					|			|
+				kathy 			john			<---Children nodes of the root (Charol)
+			....|	|....	....|	|....
+			|			|	|			|
+		  ann		george	martha		robert
+			
+00:06:00			
+height of the tree =  the longest path in the general direction
