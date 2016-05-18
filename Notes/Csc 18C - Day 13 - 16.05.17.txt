@@ -52,3 +52,9 @@
 					  5	  7	  9_   13
 							    |    
 								11
+								
+00:55:20		in order: Wiki
+				https://en.wikipedia.org/wiki/Tree_traversal
+				
+				
+				
