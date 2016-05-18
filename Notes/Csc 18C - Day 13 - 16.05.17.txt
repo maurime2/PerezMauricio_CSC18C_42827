@@ -1,1 +1,54 @@
 00:06:00	Binary Trees
+
+			tree or que, or stack
+			*****************************
+			*	BinaryTree				*
+			*****************************
+			*	-data:int				*
+			*	-leftNode:TreeNode		*
+			*	-rightNode:TreeNode		*
+			*___________________________*
+			*							*
+			*	+add(int)				*
+			*	+preOrder Traversal()	*
+			*							*
+			*							*
+			*							*
+			*****************************
+			
+			*****************************
+			*	TreeNode				*
+			*****************************
+			*	-data:int				*
+			*	-leftNode:TreeNode		*
+			*	-rightNode:TreeNode		*
+			*****************************
+			
+			
+00:13:00	traversals: inorder , pre-order, POST-ORDER
+				6, 13, 8, 18, 12, 4, 10, 3
+					 _6_
+					|   |
+				   _4  _13_
+				  |   |    | 
+				  3   8_   18
+						|
+					  _12
+					 |
+					 10
+					 
+			3,4,6,8,10,12,13,18
+			
+00:15:00	NETBEANS
+			
+00:22:30	tree on the board
+
+				8,12,6,5,9,13,11,10
+				
+						 ___8___
+						|		|
+					   _6_	   _12_
+					  |	  |   |	   |
+					  5	  7	  9_   13
+							    |    
+								11
