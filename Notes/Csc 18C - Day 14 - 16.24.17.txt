@@ -1,0 +1,14 @@
+00:04:50	- Edges:	Path between two verticies (Nodes)
+
+			- Neighbor: node that adjecent to their node with a connecting edge
+			
+			- Undirected: traversal goes from one node to another without restriction
+			  (undirected graphs)
+			
+			- Directed:	we have a specified direction between nodes
+				(Diagraph)
+				
+			- Weighted Graph:	is a graph in which each edge has a weight (often a cost).
+00:08:14	Examples: Freeway Graphs in Freeways
+			
+			

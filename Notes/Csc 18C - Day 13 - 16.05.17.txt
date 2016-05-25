@@ -57,4 +57,4 @@
 				https://en.wikipedia.org/wiki/Tree_traversal
 				
 				
-				
+				see picture for traversal
