@@ -11,5 +11,57 @@
 			- Weighted Graph:	is a graph in which each edge has a weight (often a cost).
 00:08:14	Examples: Freeway Graphs in Freeways
 			
-00:10:30	Undirected graph
+00:10:30	Undirected Graph
+			Directed Graph
+			Weighted (Directed/Underected) Graph
+			
+00:17:00	Adjacency Matrices - Matrix That reprecents a graph a graph in matrix form
+			(o's/i's for indirected, # for weighted values for weighted)
+			
+00:23:00	Going under underected
+				 _a  b  c  d  e  f_	
+				| 0	 1 	1  0  0  1 |a
+			G = | 1	 0	1  0  1  0 |b		UNDERECTED 
+				| 1	 1	0  1  0  1 |c		ADJACENTCY 
+				| 0	 0	1  0  1  0 |d		MATRIX
+				| 0	 1	0  1  0  1 |e
+				|_1	 0	1  0  1  0_|f
 				
+				
+				 _a  b  c  d  e  f_
+				| 1  0	1  0  0  1 |a		DIRECTED
+			G =	| 1	 0	1  0  1  0 |b		ADJACENTCY 
+				| 0	 0	1  1  0  1 |c		MATRIX
+				| 0  0	1  0  0	 1 |d
+				| 0	 0	0  1  0  1 |e
+				|_1	 0	0  0  1  0_|f
+				
+										SEE PICTURES
+				
+				 _a  b  c  d  e  f_
+			    | 0	 3	6  0  0	 3 |a
+			G = | 3	 0	1  0  5  0 |b		WEIGHTED
+				| 6  1  0  2  0  5 |c		ADJACENTCY
+				| 0  0  2  0  1  4 |d		MATRIX
+				| 0  5  0  1  0  1 |e
+				|_3  0  5  4  1  0_|f
+					Cheapest path is: a -> f -> e -> d
+										  (3)  (4)  (5)
+			
+00:42:55	Shortest Path: Dijkstra's algorithm
+			https://en.wikipedia.org/wiki/Shortest_path_problem#Algorithms
+			
+00:50:00
+			MST	Minimum Spaning Tree
+						All Nodes: a,b,c,d,e,f
+						Weight 8:
+						1
+			 3|---- b ---- c -----|2
+			  | 	    1      1  |
+			  a 	f ---- e ---- d
+					
+			FINAL: In fixed notation to post fixed notation
+					Create a Stack Class
+					
+00:05:00	- 				
+			
