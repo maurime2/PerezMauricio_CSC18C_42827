@@ -1,0 +1,14 @@
+The following zipfile contains the Binary Search Tree class we put together 
+in class.
+
+Your assignment is to take this Binary Search Tree class and implement it as
+a template class.
+
+Successful completion of this assignment can be possibly very helpful for
+the Final Project. 
+
+This assignment is due by 7:30PM on Tuesday, 5/24/16.
+Be sure to include either a PSP Spreadsheet  logging your time spent on 
+this assignment or placing on your github account with a minimum of three 
+commits/pushes (be sure to document how long you spent on the assignment - 
+rules of academic honesty apply).
