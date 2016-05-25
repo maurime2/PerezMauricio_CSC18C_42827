@@ -11,4 +11,5 @@
 			- Weighted Graph:	is a graph in which each edge has a weight (often a cost).
 00:08:14	Examples: Freeway Graphs in Freeways
 			
-			
+00:10:30	Undirected graph
+				
