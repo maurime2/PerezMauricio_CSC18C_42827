@@ -1,0 +1,97 @@
+00:11:00	Going through Graph.java
+
+			Dijkstara's Algorithm
+			what is shortest path from a to g?
+
+			a->c->d->g=9
+			HCDBA
+
+			temp = A B D C H G F E
+			
+			BREADTH FIRST SEARCH	-	uses a queue
+			DEPTH FIRST SEARCH		- uses a stack
+			
+			addEdge(edge_collection,edge_name, source_vertex, destination_vertex, weight, directed);
+	
+00:21:00	true directed, false underected
+			
+00:36:40	visulazation - ITS LIKE A TREE
+			http://cs.usfca.edu/~galles/visualization/BFS.html
+
+			
+			AB - 5	BE - 6	CD - 3	DC
+			AB - 4	BD - 4	CH - 6	.....
+			
+			
+			final:
+			20 questions: 
+			
+			- know about Bags and Collections
+					traverse through them
+					search through them
+					clear a bag
+					clear a bag with a linked list
+					
+			- know about Stacks
+				Last In First Out (lifo).
+				convert from infix to post fix.
+				
+00:45:21	- know about sorting/recursion
+					knows dorting alg.
+					activation records how it works with stacks.
+						(EXTRA)
+						recursive vs Iteration vs. Recursion
+						http://www.programcreek.com/2012/10/iteration-vs-recursion-in-java/
+			
+			- Know about QUEUES
+					examples of queues
+					FIFO - First in first out
+					
+			- Know about deque
+					double ended queue
+					
+			- Linked List
+					Efficiency
+						efficency
+						know operations
+						
+			- Doubly linked List
+					
+					***********		***********		***********	
+					*/*		* * --> * *		* * --> * *		*/*
+					*/*  1  * *		* *  8  * *		* *  4  */*
+					*/*		* *	<-- * *		* *	<-- * *		*/*
+					***********		***********		***********
+					
+					
+			- Trees
+			TREE HEIRACHY
+				Know about binary search trees.
+				Know about Tree Traversals
+				
+				
+												  root
+											------|   |------
+											|	   			|
+									    --child--  		--child--
+									    |		 |	   |		 |  
+									   leaf	    leaf  leaf	    leaf  
+LISTEN AGAIN					
+00:56:30		Orders for graphs
+				
+				Graphs - know the general terms
+					- vertex	- neighbor
+					- edge
+					
+					see traversals
+					http://www.tutorialspoint.com/data_structures_algorithms/depth_first_traversal.htm
+					- know Dijkstra's Algorithm
+					- DFS - Depth first search
+					- Breadth first search
+
+					
+										1st graph	A B C D E F
+										2nd graph	A D B C E F 	
+										3rd graph	A B D C E
+										
+					
