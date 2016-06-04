@@ -1,3 +1,4 @@
+/*
 http://visualgo.net/sorting.html#
 
 Implement in your Bag class, the Selection Sort and Merge Sort 
@@ -21,3 +22,23 @@ In all of the sorting algorithms you implement:
 		filled out PSP Excel Spreadsheet.
 
 This assignment is due no later than 11:59PM on 4/8/16 for 50 points.
+
+*/
+
+//Libraries
+package bagclassesorts;
+
+//Bag Class Sorts
+public class BagClasseSorts {
+
+    //Main Class Start
+    public static void main(String[] args) {
+        //Beclare Variables and Objects
+        boolean decending = false;
+        String input = null;
+        
+        
+        
+    }
+    
+}

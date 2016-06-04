@@ -35,10 +35,21 @@
 			- know about Stacks
 				Last In First Out (lifo).
 				convert from infix to post fix.
+				push();
+				pop();
+				peak();
+				isempty();
+				clear():
+				
 				
 00:45:21	- know about sorting/recursion
-					knows dorting alg.
-					activation records how it works with stacks.
+					- knows Sorting Algorithm.
+						activation Records
+						how it works with the stack
+00:46:20								- recursive functions in a irrative manner
+												-while loop: 
+														Emulate activation records of a recursive method
+														
 						(EXTRA)
 						recursive vs Iteration vs. Recursion
 						http://www.programcreek.com/2012/10/iteration-vs-recursion-in-java/
@@ -49,6 +60,7 @@
 					
 			- Know about deque
 					double ended queue
+						
 					
 			- Linked List
 					Efficiency
@@ -68,7 +80,9 @@
 			TREE HEIRACHY
 				Know about binary search trees.
 				Know about Tree Traversals
-				
+					post order - lvr
+					pre order - vlr
+					in order - lvr
 				
 												  root
 											------|   |------
