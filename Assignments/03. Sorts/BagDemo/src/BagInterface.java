@@ -1,5 +1,3 @@
-package bagclassesorts;
-
 public interface BagInterface<T> {
     // return the current size of the bag, or the number of elements in the bag
     public int getSize();
@@ -21,4 +19,5 @@ public interface BagInterface<T> {
     
     // returns array of items in bag
     public T[] toArray();
+    
 }
