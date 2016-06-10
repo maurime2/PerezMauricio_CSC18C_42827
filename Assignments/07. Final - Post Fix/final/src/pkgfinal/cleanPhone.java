@@ -115,7 +115,7 @@ public class cleanPhone {
     }//end clean string method
     
     
-    //Method Clean String
+    //Method test - Finds all Open And Closed Parenthesis - Fail if no match
     public boolean test(String phoneNum, boolean test){
         int open = 0;
         int close = 0;
@@ -139,16 +139,17 @@ public class cleanPhone {
             }
         }//For Loop Closed
         
-            if(open == close){
+        
+        if(open == close){
                 System.out.println("\nMatched Complete: open = "+open+", Close = "+close+"");
                 test = true;
             }
         //Return Boolean
         return test;
-    }
+    }//End Method Test
     
     
-    //Method Clean String
+    //Method Clean fixNeg - NO LONGER NEEDED TO FIX NEG - INSTEAD, IT PROVIDES VALUES
     public boolean fixNeg(String phoneNum, boolean test){
         int operators = 0;
         int numbers = 0;
@@ -159,61 +160,116 @@ public class cleanPhone {
         
         //Check String untill you find a - sign
         for(int i = 0;i<phoneNum.length();i++){
-            //  value = phoneNum.charAt(i);
+            //Find values of each character with app
+            app = phoneNum.charAt(i);
+            System.out.println("App is: "+app);
             
-            if(phoneNum.charAt(i)== '+'){
-                System.out.println("Its a Plus Sign: "+phoneNum.charAt(i));
+            
+            //Check Digits
+            if( (app== '0')||(app== '1')||(app== '2')||(app== '3')
+                    ||(app== '4')||(app== '5')||(app== '6')||(app== '7')
+                    ||(app== '8')||(app== '9') ){
+            
+            //Start Number or () store
+                System.out.println("Its a Number: "+phoneNum.charAt(i));
+                numbGen = true;
+                do{
+                    app = phoneNum.charAt(i);
+                    if( i<phoneNum.length() &&((app== '0')||(app== '1')||(app== '2')||(app== '3')
+                    ||(app== '4')||(app== '5')||(app== '6')||(app== '7')
+                    ||(app== '8')||(app== '9')) ){            
+                            //
+                            if(numbGen){
+                            concat = String.valueOf(app);
+                            System.out.println("Concatinate " + concat + "i: "+i);
+                            value = value+concat;    
+
+
+
+                               //Check for next value
+                               if(i<phoneNum.length()){
+                                i++;
+                               } 
+
+                                //Correct the value if its out of range
+                                if(i>=phoneNum.length()){
+                                i--;
+                                numbGen=false;
+                                }
+                            }
+                    }
+                    else{
+                    //next value probably not a number or out of range
+                    numbGen=false;
+                    i--;
+                    }
+                }while(numbGen);
                 
+    
                 
-            }
-          else if(phoneNum.charAt(i)=='-'){
-                System.out.println("Its a Negative Sign: "+phoneNum.charAt(i));
+                System.out.println("Value: " + value+"\n");
+                
+                //Push value
+                
+                //Clear Value for next use
+                value = "";
+            
+            }//Check digits ends
+            
+            
+            //Operator
+            else if((app== '+')||(app== '-')||(app== '*')||(app== '/')||(app== '^')){
+                System.out.println("Its an OPPERATOR: "+phoneNum.charAt(i));
                 app = phoneNum.charAt(i);
-                    
+
+                if(phoneNum.charAt(i)== '+'){
+                System.out.println("Its a Possitive Sign: "+phoneNum.charAt(i));
+                }
+                else if(phoneNum.charAt(i)== '-'){
+                System.out.println("Its a Negative Sign: "+phoneNum.charAt(i));
+                }
+                else if(phoneNum.charAt(i)== '*'){
+                System.out.println("Its a Multiplication Sign: "+phoneNum.charAt(i));
+                }
+                else if(phoneNum.charAt(i)== '/'){
+                System.out.println("Its a Division Sign: "+phoneNum.charAt(i));
+                }
+                else if(phoneNum.charAt(i)== '^'){
+                System.out.println("Its a Power Sign: "+phoneNum.charAt(i));
+                }
+                
+                
                 //PUSH ZERO
                 concat = String.valueOf(app);
                 value = value+concat;   
                 
                 //Push Value to Characters
-                System.out.println("Value; " + value);
-                
+                System.out.println("Opperator; " + value+"\n");
+                //Clear Value for next time
                 value = "";
+            }//Check for Opperators ends
+            
+
+            
                 
-                }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            else if(phoneNum.charAt(i)== '*'){
-                System.out.println("Its a Multiplication Sign: "+phoneNum.charAt(i));
-            }
-            else if(phoneNum.charAt(i)== '/'){
-                System.out.println("Its a Division Sign: "+phoneNum.charAt(i));
-            }
-            else if(phoneNum.charAt(i)== '^'){
-                System.out.println("Its a Exponent: "+phoneNum.charAt(i));
-            }
-            else if(phoneNum.charAt(i)== ' '){
-            System.out.println("Its a Space: "+phoneNum.charAt(i));
-                
-            }
+            //Parenthesis
             else{
                 //Start Number or () store
-                System.out.println("Its a Number or (): "+phoneNum.charAt(i));
+                System.out.println("Its a Parenthesis (): "+phoneNum.charAt(i));
                 numbGen = true;
                 do{
                 app = phoneNum.charAt(i);
                 
                 //If its not a number, dont concatinate
-                if( (app =='/') || (app =='*') || (app =='+') || (app =='-') || (app =='^') || (app =='(') || (app ==')') ){
-                    System.out.println("Concatination Loop Ends");
+                //If its not a number, dont concatinate
+                if( (app =='(') || (app ==')') ){
+                    System.out.println("Concatination Loop Ends: Parenthesis");
                     numbGen = false;
+                }
+                else if( (app =='/') || (app =='*') || (app =='+') || (app =='-') || (app =='^') || (app =='(') || (app ==')') ){
+                    System.out.println("Concatination Loop Ends: OPPERATOR");
+                    numbGen = false;
+                    i--;
                 }
                 
                 //
@@ -225,7 +281,8 @@ public class cleanPhone {
                 
                 
                 }while(numbGen);
-                System.out.println("Value; " + value);
+                
+                System.out.println("Value; " + value+"\n");
                 
                 //Push value
                 
