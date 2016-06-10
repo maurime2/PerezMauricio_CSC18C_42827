@@ -35,15 +35,18 @@ public class Final{
                 }
             }while(test==false);
         
-        //Begin Stacking and Queing operation
-        System.out.println("Clean String Check 1: "+clean);
-        //Check for proper signs and fix what looks wrong
-        test = cleanPhoneObject.fixNeg(clean, test);
-        if(test==false){
-        System.out.println("Your operators seem off. Please input again... "+clean);
-        }
-        
+            //Begin Cleaning Opperation 1   -   THIS TURNED INTO STACKING VALUES INTO ARRAY OPP
+            System.out.println("Clean String Check 1: "+clean);
+            //Check for proper signs and fix what looks wrong
+            test = cleanPhoneObject.fixNeg(clean, test);
+            if(test==false){
+            System.out.println("Your operators seem off. Please input again... "+clean);
+            }
         }while(test==false);
+        
+        //Numbers and Opperators are in arrays within cleanPhone, Must Get Them
+        System.out.println("\nTest Complete!!! Time to Opperate!!!\n");
+        cleanPhoneObject.show();
     }//Main End
     
 }//Final Class End

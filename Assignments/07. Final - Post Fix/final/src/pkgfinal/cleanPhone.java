@@ -22,26 +22,27 @@ import java.util.Arrays;    //to create arrays in Java
 //class cleanPhone Start
 public class cleanPhone {
     //Declare global variables
+    int numTotal = 0;
+    int oppTotal = 0;
+    int perTotal = 0;
+    String valTotal = "";
+    String [] numArr = new String[20];
+    int numArrP = 0;
+    String [] oppArr = new String[20];
+    int oppArrP = 0;
     
     //Method Clean String
     public String cleanString(String phoneNum, String cleanPhoneNum){
         //Declare Variables
         String temp = phoneNum;
-        String leftB = "(";
-        String rightB = ")";
-        String Space = "-";
-        String MultO = "*";
-        String ADDO = "+";
-        String DivO = "/";
-        String ExpO = "^";
-        String SubO = "-";
+
         
         //http://regexr.com/ 
         //Prepare String Array to be manipulated
         temp = temp.replaceAll("[A-Za-z]", "");   //Removes All Punctuation w/reg expressions.
         temp = temp.replaceAll("[!@#$%&_=]", "");   //Removes All Punctuation w/reg expressions.
         temp = temp.replaceAll("[`~<>,.?\"'{}]", "");   //Removes All Punctuation w/reg expressions.
-        temp = temp.replaceAll("[\\.\\* \\r\\t\\n:|]", "");   //Removes All Punctuation w/reg expressions.
+        temp = temp.replaceAll("[\\.\\r\\t\\n:|]", "");   //Removes All Punctuation w/reg expressions.
         //Removes all expressions followed by closed parentesies and replaces them with )
         int times = 0;
         do{
@@ -158,12 +159,11 @@ public class cleanPhone {
         String concat = "";
         boolean numbGen = false;
         
-        //Check String untill you find a - sign
+        //Check String for opperators, Parenthesis, and numeric values
         for(int i = 0;i<phoneNum.length();i++){
             //Find values of each character with app
             app = phoneNum.charAt(i);
             System.out.println("App is: "+app);
-            
             
             //Check Digits
             if( (app== '0')||(app== '1')||(app== '2')||(app== '3')
@@ -205,17 +205,17 @@ public class cleanPhone {
                     }
                 }while(numbGen);
                 
-    
-                
+                //Print Value
                 System.out.println("Value: " + value+"\n");
-                
                 //Push value
+                ///Push to bag of strings
+                numArr[numArrP]=value;
+                numArrP++;
                 
                 //Clear Value for next use
                 value = "";
-            
+                numTotal++;
             }//Check digits ends
-            
             
             //Operator
             else if((app== '+')||(app== '-')||(app== '*')||(app== '/')||(app== '^')){
@@ -238,15 +238,19 @@ public class cleanPhone {
                 System.out.println("Its a Power Sign: "+phoneNum.charAt(i));
                 }
                 
-                
                 //PUSH ZERO
                 concat = String.valueOf(app);
                 value = value+concat;   
                 
-                //Push Value to Characters
-                System.out.println("Opperator; " + value+"\n");
+                //Print Opperator
+                System.out.println("Opperator: " + value+"\n");
+                ///Push to bag of strings
                 //Clear Value for next time
+                oppArr[oppArrP]=value;
+                oppArrP++;
+                
                 value = "";
+                oppTotal++;
             }//Check for Opperators ends
             
 
@@ -264,9 +268,11 @@ public class cleanPhone {
                 //If its not a number, dont concatinate
                 if( (app =='(') || (app ==')') ){
                     System.out.println("Concatination Loop Ends: Parenthesis");
+                    concat = String.valueOf(app);
+                    value = value+concat;
                     numbGen = false;
                 }
-                else if( (app =='/') || (app =='*') || (app =='+') || (app =='-') || (app =='^') || (app =='(') || (app ==')') ){
+                else if( (app =='/') || (app =='*') || (app =='+') || (app =='-') || (app =='^') ){
                     System.out.println("Concatination Loop Ends: OPPERATOR");
                     numbGen = false;
                     i--;
@@ -282,19 +288,47 @@ public class cleanPhone {
                 
                 }while(numbGen);
                 
-                System.out.println("Value; " + value+"\n");
+                System.out.println("Value: " + value+"\n");
                 
                 //Push value
                 
                 //Clear Value for next use
                 value = "";
-            }
-            //int i = Integer.parseInt(myString);
-            
+                perTotal++;
+            }//Parenthesis End
         }
-        
-        
+        //Sum Totals
+        valTotal=phoneNum;
+        System.out.printf("String: %s\n",valTotal);
+        System.out.println("Per Total: " + perTotal);
+        System.out.println("Num Total: " + numTotal);
+        System.out.println("Opp Total: " + oppTotal);
+        //Per Total, numTotal, and oppTotal
         return test;
     }
     
+    
+    public void show(){
+        System.out.println("Showing Global Variables...");
+        String temp = "";
+        //Print Numbers in Array's
+            //Print Numbers in Array
+            for(int i=0;i<numArrP;i++){
+            temp = numArr[i];
+                System.out.printf("Number Array at %d: %s\n",i,temp);
+            }
+
+            //Print Opperators in array
+            for(int i=0;i<oppArrP;i++){
+            temp = oppArr[i];
+                System.out.printf("Opperator Array at %d: %s\n",i,temp);
+            }
+        
+        //Print Global Values of 
+        System.out.printf("String: %s\n",valTotal);
+        System.out.println("Per Total: " + perTotal);
+        System.out.println("num Total: " + numTotal);
+        System.out.println("opp Total: " + oppTotal);
+    }
+            
 }//class cleanPhone end
