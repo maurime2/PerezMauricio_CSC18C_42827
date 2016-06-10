@@ -42,6 +42,71 @@ public class cleanPhone {
         temp = temp.replaceAll("[!@#$%&_=]", "");   //Removes All Punctuation w/reg expressions.
         temp = temp.replaceAll("[`~<>,.?\"'{}]", "");   //Removes All Punctuation w/reg expressions.
         temp = temp.replaceAll("[\\.\\* \\r\\t\\n:|]", "");   //Removes All Punctuation w/reg expressions.
+        //Removes all expressions followed by closed parentesies and replaces them with )
+        int times = 0;
+        do{
+        temp = temp.replaceAll("(-\\))"     , ")");      //Removes All "-)" replaces with )
+        temp = temp.replaceAll("(\\+\\))"   , ")");     //Removes All "+)" replaces with )
+        temp = temp.replaceAll("(\\*\\))"   , ")");    //Removes All "*)" replaces with )
+        temp = temp.replaceAll("(\\/\\))"   , ")");   //Removes All "/)" replaces with )
+        temp = temp.replaceAll("(\\^\\))"     , ")");  //Removes All "^)" replaces with )
+        temp=temp;
+        
+        //Replaces open parentasies and + * ^ / with (
+        temp = temp.replaceAll("(\\(\\^)", "(");        //Removes All "^)" replaces with (
+        temp = temp.replaceAll("(\\(\\+)", "(");     //Removes All "+)" replaces with (
+        temp = temp.replaceAll("(\\(\\*)", "(");    //Removes All "*)" replaces with (
+        temp = temp.replaceAll("(\\(\\/)", "(");   //Removes All "/)" replaces with (
+        temp=temp;
+        times++;
+        
+        //Replace ++ -- -+ +- with + + - - respectively
+        temp = temp.replaceAll("(--)", "+");   //Removes All "--" replaces with +
+        temp = temp.replaceAll("(\\+\\+)", "+");   //Removes All "++" replaces with +
+        temp = temp.replaceAll("(-\\+)", "-");   //Removes All "-+" replaces with -
+        temp = temp.replaceAll("(\\+\\-)", "-");   //Removes All "+-" replaces with -
+        
+        //Replace all double signs ^^ ** //
+        temp = temp.replaceAll("(\\^\\^)", "^");   //Removes All "^^" replaces with ^
+        temp = temp.replaceAll("(\\*\\*)", "*");   //Removes All "**" replaces with *
+        temp = temp.replaceAll("(\\/\\/)", "/");   //Removes All "//" replaces with /
+        
+        //Replace multiply expression double inputs
+        temp = temp.replaceAll("(\\*\\+)", "*");   //Removes All "**" replaces with *
+        temp = temp.replaceAll("(\\*-)", "*");   //Removes All "**" replaces with *
+        temp = temp.replaceAll("(\\*\\/)", "*");   //Removes All "**" replaces with *
+        temp = temp.replaceAll("(\\*\\^)", "*");   //Removes All "**" replaces with *
+
+        //Replace Divide expression double inputs
+        temp = temp.replaceAll("(\\/\\+)"   , "/");   //Removes All "/+" replaces with /
+        temp = temp.replaceAll("(\\/-)"     , "/");   //Removes All "/-" replaces with /
+        temp = temp.replaceAll("(\\/\\*)"   , "/");   //Removes All "/*" replaces with /
+        temp = temp.replaceAll("(\\/\\^)"   , "/");   //Removes All "/^" replaces with /
+        
+        //Replace Exponent expression double inputs
+        temp = temp.replaceAll("(\\^\\+)"   , "^");   //Removes All "^+" replaces with ^
+        temp = temp.replaceAll("(\\^-)"     , "^");   //Removes All "^-" replaces with ^
+        temp = temp.replaceAll("(\\^\\/)"   , "^");   //Removes All "^/" replaces with ^
+        temp = temp.replaceAll("(\\^\\*)"   , "^");   //Removes All "^*" replaces with ^
+
+        //Replace possitive expression double inputs
+        temp = temp.replaceAll("(\\+\\*)", "+");   //Removes All "+*" replaces with +
+        temp = temp.replaceAll("(\\+\\/)", "+");   //Removes All "+/" replaces with +
+        temp = temp.replaceAll("(\\+\\^)", "+");   //Removes All "+^" replaces with +
+        
+        //Replace possitive expression double inputs
+        temp = temp.replaceAll("(\\-\\*)", "+");   //Removes All "-*" replaces with -
+        temp = temp.replaceAll("(\\-\\/)", "+");   //Removes All "-/" replaces with -
+        temp = temp.replaceAll("(\\-\\^)", "+");   //Removes All "-^" replaces with -
+        
+        //Empty "()"
+        temp = temp.replaceAll("(\\(\\))", "");   //Removes All "()" replaces with ""
+        
+        }while(times<=100);
+        //}
+        //Removes all +- -+ and leaves -
+        
+//(-\))
         System.out.println("Clean String: "+temp);
         cleanPhoneNum = temp;
         
@@ -72,10 +137,10 @@ public class cleanPhone {
                 }
                 
             }
-        }
+        }//For Loop Closed
         
             if(open == close){
-                System.out.println(" Matched Complete: open = "+open+", Close = "+close+"");
+                System.out.println("\nMatched Complete: open = "+open+", Close = "+close+"");
                 test = true;
             }
         //Return Boolean
@@ -88,28 +153,86 @@ public class cleanPhone {
         int operators = 0;
         int numbers = 0;
         String value = "";
+        char app = ' ';
+        String concat = "";
+        boolean numbGen = false;
+        
         //Check String untill you find a - sign
         for(int i = 0;i<phoneNum.length();i++){
-            value = phoneNum.charAt(i);
+            //  value = phoneNum.charAt(i);
             
             if(phoneNum.charAt(i)== '+'){
+                System.out.println("Its a Plus Sign: "+phoneNum.charAt(i));
+                
                 
             }
-            else if(phoneNum.charAt(i)== '-'){
+          else if(phoneNum.charAt(i)=='-'){
+                System.out.println("Its a Negative Sign: "+phoneNum.charAt(i));
+                app = phoneNum.charAt(i);
+                    
+                //PUSH ZERO
+                concat = String.valueOf(app);
+                value = value+concat;   
                 
-            }
+                //Push Value to Characters
+                System.out.println("Value; " + value);
+                
+                value = "";
+                
+                }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             else if(phoneNum.charAt(i)== '*'){
-                
+                System.out.println("Its a Multiplication Sign: "+phoneNum.charAt(i));
             }
             else if(phoneNum.charAt(i)== '/'){
-                
+                System.out.println("Its a Division Sign: "+phoneNum.charAt(i));
             }
             else if(phoneNum.charAt(i)== '^'){
+                System.out.println("Its a Exponent: "+phoneNum.charAt(i));
+            }
+            else if(phoneNum.charAt(i)== ' '){
+            System.out.println("Its a Space: "+phoneNum.charAt(i));
                 
             }
-            else if(){
-            
+            else{
+                //Start Number or () store
+                System.out.println("Its a Number or (): "+phoneNum.charAt(i));
+                numbGen = true;
+                do{
+                app = phoneNum.charAt(i);
+                
+                //If its not a number, dont concatinate
+                if( (app =='/') || (app =='*') || (app =='+') || (app =='-') || (app =='^') || (app =='(') || (app ==')') ){
+                    System.out.println("Concatination Loop Ends");
+                    numbGen = false;
+                }
+                
+                //
+                if(numbGen){
+                concat = String.valueOf(app);
+                value = value+concat;    
+                i++;
+                }
+                
+                
+                }while(numbGen);
+                System.out.println("Value; " + value);
+                
+                //Push value
+                
+                //Clear Value for next use
+                value = "";
             }
+            //int i = Integer.parseInt(myString);
             
         }
         

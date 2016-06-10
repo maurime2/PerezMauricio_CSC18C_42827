@@ -18,6 +18,8 @@ public class Final{
         do{
             do{
                 //Prompt Input
+                System.out.println("Input Equation with exact Parenthesis.");
+                System.out.println("No negative numbers allowed!!!");
                 System.out.println("Input An Equation:");    
                 phoneNumbOrig=input.nextLine();
                 System.out.println("You Input: "+phoneNumbOrig );
