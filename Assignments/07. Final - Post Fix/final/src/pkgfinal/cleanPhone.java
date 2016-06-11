@@ -100,6 +100,32 @@ public class cleanPhone {
         temp = temp.replaceAll("(\\-\\/)", "+");   //Removes All "-/" replaces with -
         temp = temp.replaceAll("(\\-\\^)", "+");   //Removes All "-^" replaces with -
         
+        
+        //Replace all numbers followed by open Parenthesis
+        temp = temp.replaceAll("(0\\()", "0*(");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(1\\()", "1*(");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(2\\()", "2*(");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(3\\()", "3*(");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(4\\()", "4*(");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(5\\()", "5*(");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(6\\()", "6*(");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(7\\()", "7*(");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(8\\()", "8*(");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(9\\()", "9*(");   //Removes All "()" replaces with ""
+        
+        //Replace all closed Parenthesis followed by numbers
+        temp = temp.replaceAll("(\\)0)", ")*0");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(\\)1)", ")*1");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(\\)2)", ")*2");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(\\)3)", ")*3");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(\\)4)", ")*4");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(\\)5)", ")*5");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(\\)6)", ")*6");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(\\)7)", ")*7");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(\\)8)", ")*8");   //Removes All "()" replaces with ""
+        temp = temp.replaceAll("(\\)9)", ")*9");   //Removes All "()" replaces with ""
+        
+        
         //Empty "()"
         temp = temp.replaceAll("(\\(\\))", "");   //Removes All "()" replaces with ""
         
@@ -136,7 +162,6 @@ public class cleanPhone {
                 System.out.println("\nMiss Match!!!");
                 break;
                 }
-                
             }
         }//For Loop Closed
         
@@ -253,9 +278,6 @@ public class cleanPhone {
                 oppTotal++;
             }//Check for Opperators ends
             
-
-            
-                
             //Parenthesis
             else{
                 //Start Number or () store
@@ -330,5 +352,24 @@ public class cleanPhone {
         System.out.println("num Total: " + numTotal);
         System.out.println("opp Total: " + oppTotal);
     }
-            
+    
+    
+    public int numArrP(){
+        return numArrP;
+    }
+    
+    public String numArr(int i){
+        int index=i;
+        return numArr[index];
+    }
+    
+    public int oppArrP(){
+        return oppArrP;
+    }
+        
+    public String oppArr(int i){
+        int index=i;
+        return oppArr[index];
+    }
+    
 }//class cleanPhone end

@@ -3,7 +3,7 @@ public final class Bag<T> implements BagInterface<T> {
     private int numberOfEntries;
     
     public Bag() {
-        bag_items = (T[])new Object[10]; // default 10 item bag
+        bag_items = (T[])new Object[20]; // default 10 item bag
         this.numberOfEntries=0;
     }
     

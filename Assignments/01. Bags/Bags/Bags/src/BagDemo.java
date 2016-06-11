@@ -7,6 +7,7 @@ public class BagDemo {
         bag_of_strings.add("World!");
         bag_of_strings.add("Structures1");
         bag_of_strings.add("Data");
+	bag_of_strings.add("Structures1");
         bag_of_strings.add("Structures2");
         bag_of_strings.remove("Structures1");   //Removed from bag
         

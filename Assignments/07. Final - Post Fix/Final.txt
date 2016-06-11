@@ -1,0 +1,44 @@
+Write a Java program that has a function named convertToPostFix that takes a String parameter named infix to convert an expression from infix notation to postfix notation, and a second function named evaluatePostFix which takes a String parameter named expr to evaluate a postfix expression to its numerical answer.
+
+Test cases:
+
+3 * (4 + 5) 	
+			when converted from infix to postfix will have the postfix expression: 
+
+3 4 5 + * 
+			returned from convertToPostFix, and returns 27 when 
+			evaluatePostFix has 3 4 5 + * passed to it.
+
+2 * ((3+5)*(3+2)) 
+			when converted from infix to postfix will have the postfix expression: 
+2 3 5 + 3 2 + * * 
+			returned from convertToPostFix, and 
+			returns 80 when evaluatePostFix has 
+			2 3 5 + 3 2 + * * passed to it.
+
+6 * (3+(7*8)*(5+2)) 
+			when converted from infix to postfix will have the postfix expression: 
+6 3 7 8 * 5 2 + * + * 
+			returned from convertToPostFix, and 
+			returns 2370 when evaluatePostFix has 
+			6 3 7 8 * 5 2 + * + * passed to it.
+
+-2 * (3+5) 
+			when converted from infix to postfix will have the postfix expression: 
+-2 3 5 + * 
+			returned from convertToPostFix, and 
+			returns -16 when evaluatePostFix has 
+			-2 3 5 + * passed to it. 
+
+You must derive your own Stack class for this problem. 
+You are not allowed to use the built in Stack class that comes with the Java Runtime.
+Make sure to name your two functions: 
+
+	convertToPostFix and evaluatePostFix as specified because I will test the project through a Unit Test class.
+
+Make sure to include a well documented PSP Spreadsheet with your time accurately documented
+(I will be counting this towards the grade). This is due no later than 11:59PM on 6/8/16 for 
+100 points out of 200 points for your Final Exam grade!
+This work must be of individual work and all policies for Academic Honesty will be strictly
+enforced! Submit this Final Project through the Submission Tool on 
+Open Campus in the form of one zipfile containing your project and PSP Spreadsheet.
